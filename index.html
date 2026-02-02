@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Screen 1: The Envelope -->
+        <div id="envelope-screen" class="screen active">
+            <div class="envelope-wrapper" onclick="openEnvelope()">
+                <div class="envelope">
+                    <div class="heart-seal">❤️</div>
+                </div>
+                <p class="click-hint">Click to open</p>
+            </div>
+        </div>
+
+        <!-- Screen 2: The Question -->
+        <div id="question-screen" class="screen hidden">
+            <img id="main-image" src="https://i.pinimg.com/736x/b4/1d/43/b41d43580721e06ae27147db1d73ed40.jpg" alt="Cute Cat" />
+            <h1>Will you be my Valentine?</h1>
+            <div class="buttons">
+                <button id="yes-btn" onclick="handleYes()">Yes</button>
+                <button id="no-btn" onclick="handleNo()">No</button>
+            </div>
+        </div>
+
+        <!-- Screen 3: Success -->
+        <div id="success-screen" class="screen hidden">
+            <img src="https://media.tenor.com/razaJhexU60AAAAj/happy-dance.gif" alt="Dancing Cat" />
+            <h1>YIPPIE!!!</h1>
+            <p>I knew you would say yes! <3</p>
+            <div class="custom-note">
+                <p>See you on the 14th! Love, DoadwiRani</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

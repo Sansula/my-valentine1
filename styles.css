@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.screen.active {
+    display: flex;
+}
+
+img {
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+/* Envelope Animation */
+.envelope-wrapper {
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+.envelope {
+    width: 150px;
+    height: 100px;
+    background-color: #ff4d4d;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.envelope:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-top: 50px solid #ff6666;
+}
+
+.heart-seal {
+    font-size: 40px;
+    margin-top: -10px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#yes-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#no-btn {
+    background-color: #f44336;
+    color: white;
+}
